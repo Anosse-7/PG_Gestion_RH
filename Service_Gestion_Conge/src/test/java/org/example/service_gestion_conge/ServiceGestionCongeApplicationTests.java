@@ -1,10 +1,10 @@
-package org.example.service_gestion_conges;
+package org.example.service_gestion_conge;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ServiceGestionCongesApplicationTests {
+class ServiceGestionCongeApplicationTests {
 
     @Test
     void contextLoads() {
