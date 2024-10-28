@@ -1,4 +1,4 @@
-package org.example.service_gestion_conge;
+package com.example.service_gestion_conge;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
