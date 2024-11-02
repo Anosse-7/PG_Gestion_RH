@@ -1,11 +1,10 @@
-package org.example.service_gestion_administrateur;
+package org.example.eurkadiscovery;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-
 @SpringBootTest
-class ServiceGestionAdministrateurApplicationTests {
+class EurkaDiscoveryApplicationTests {
 
     @Test
     void contextLoads() {

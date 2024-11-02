@@ -1,13 +1,14 @@
-package com.example.service_gestion_administrateur;
+package org.example.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ServiceGestionAdministrateur {
+public class GatewayApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(ServiceGestionAdministrateur.class, args);
+        SpringApplication.run(GatewayApplication.class, args);
     }
+
 }

@@ -1,13 +1,14 @@
 package com.example.service_gestion_authentification;
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ServiceGestionAuthentificationApplicationTests {
+public class ServiceGestionAuthentificationApplicationTests {
 
     @Test
-    void contextLoads() {
+    public void contextLoads() {
     }
 
 }
