@@ -1,4 +1,4 @@
-package Entitys;
+package org.example.service_gestion_employes.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class Admins {
+@AllArgsConstructor
+public class Employees {
     @Id
     @GeneratedValue
     private Long id;
@@ -19,4 +19,7 @@ public class Admins {
     private String prenom;
     private String email;
     private String password;
+    private String departement;
+    private String poste;
+    private String dateEmbauche;
 }

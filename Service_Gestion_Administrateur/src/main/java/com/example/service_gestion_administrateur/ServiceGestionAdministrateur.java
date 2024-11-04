@@ -2,8 +2,10 @@ package com.example.service_gestion_administrateur;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
+@EnableFeignClients(basePackages = "org.example.service_gestion_employes.FeignClients")
 public class ServiceGestionAdministrateur {
 
     public static void main(String[] args) {

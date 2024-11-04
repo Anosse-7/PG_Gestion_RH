@@ -1,13 +1,13 @@
 package org.example.service_gestion_employes;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ServiceGestionEmployesApplicationTests {
+public class ServiceGestionEmployesApplicationTests {
 
     @Test
-    void contextLoads() {
+    public void contextLoads() {
     }
 
 }

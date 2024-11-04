@@ -1,9 +1,8 @@
-package Services;
+package com.example.service_gestion_administrateur.Services;
 
-import DAO.AdminsRepo;
-import Entitys.Admins;
+import com.example.service_gestion_administrateur.DAO.AdminsRepo;
+import com.example.service_gestion_administrateur.Entitys.Admins;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
