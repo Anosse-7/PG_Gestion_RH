@@ -1,5 +1,5 @@
 package org.example.service_gestion_employes.FeignClients;
-
+/*
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,5 +32,5 @@ public interface EmployeeAPI {
 
     @DeleteMapping("/employees/{id}")
     String deleteEmployee(@PathVariable Long id);
-
 }
+*/

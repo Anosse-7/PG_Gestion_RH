@@ -1,5 +1,5 @@
 package com.example.service_gestion_administrateur.Controllers;
-
+/*
 import org.example.service_gestion_employes.FeignClients.EmployeeAPI;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,3 +28,4 @@ public class EmployeeRestClient {
         return employeeAPI.addEmployee(employee);
     }
 }
+*/

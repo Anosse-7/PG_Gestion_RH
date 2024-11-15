@@ -14,12 +14,14 @@
         <module name="Eurka-Discovery" />
         <module name="Service_Gestion_Authentification" />
         <module name="Service_Performance" />
+        <module name="Config-Server" />
         <module name="Service_Gestion_Administrateur" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Config-Server" options="-parameters" />
       <module name="Eurka-Discovery" options="-parameters" />
       <module name="Gateway" options="-parameters" />
       <module name="Service_Gestion_Administrateur" options="-parameters" />

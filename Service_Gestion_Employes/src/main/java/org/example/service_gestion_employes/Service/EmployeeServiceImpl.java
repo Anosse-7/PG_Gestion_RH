@@ -5,7 +5,7 @@ import org.example.service_gestion_employes.Entity.Employees;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("EmployeeServiceImpl")
 public class EmployeeServiceImpl implements EmployeeService {
 
     private final EmployeeRestRepo employeeRepository;
