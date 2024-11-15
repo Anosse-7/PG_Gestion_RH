@@ -1,11 +1,10 @@
-package org.example.service_gestion_administrateur;
+package org.example.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-
 @SpringBootTest
-class ServiceGestionAdministrateurApplicationTests {
+class GatewayApplicationTests {
 
     @Test
     void contextLoads() {
