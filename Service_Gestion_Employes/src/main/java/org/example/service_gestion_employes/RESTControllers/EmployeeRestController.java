@@ -3,6 +3,8 @@ package org.example.service_gestion_employes.RESTControllers;
 import org.example.service_gestion_employes.Entity.Employees;
 import org.example.service_gestion_employes.Service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,8 +22,15 @@ public class EmployeeRestController {
     }
 
     @PostMapping("/addemployee")
-    public String addEmployee(@RequestBody Employees employee) {
-        employeeService.addEmployee(employee);
-        return "Employee added";
+    public ResponseEntity<String> addEmployee(@RequestBody Employees employee) {
+        try {
+            employeeService.addEmployee(employee);
+            return ResponseEntity.ok("Employee added");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Error adding employee: " + e.getMessage());
+        }
     }
+
 }
