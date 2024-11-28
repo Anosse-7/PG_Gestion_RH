@@ -26,7 +26,7 @@ public interface EmployeeAPI {
     @GetMapping("/employees/{nom}")
     String getEmployeeByNom(@PathVariable String nom);
 
-    @PostMapping("/employees/add")
+    @PostMapping(value = "/employees/add", consumes = "application/json")
     String addEmployee(@RequestBody String employee);
 
     @DeleteMapping("/employees/delete/{id}")
