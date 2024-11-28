@@ -1,15 +1,14 @@
 package org.example.service_gestion_employes.FeignClients;
-/*
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient(name = "service-gestion-employes")
+@FeignClient(name = "ServiceGestionEmployes")
 public interface EmployeeAPI {
 
-    @GetMapping("/employees")
+    @GetMapping("/employees/get")
     String getEmployees();
 
-    @GetMapping("/employees/{id}")
+    @GetMapping("/employees/get/{id}")
     String getEmployeeById(@PathVariable Long id);
 
     @GetMapping("/employees/{email}")
@@ -27,10 +26,9 @@ public interface EmployeeAPI {
     @GetMapping("/employees/{nom}")
     String getEmployeeByNom(@PathVariable String nom);
 
-    @PostMapping("/employee/add")
+    @PostMapping("/employees/add")
     String addEmployee(@RequestBody String employee);
 
-    @DeleteMapping("/employees/{id}")
+    @DeleteMapping("/employees/delete/{id}")
     String deleteEmployee(@PathVariable Long id);
 }
-*/

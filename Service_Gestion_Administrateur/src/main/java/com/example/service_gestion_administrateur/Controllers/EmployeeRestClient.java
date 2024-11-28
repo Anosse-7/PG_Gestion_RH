@@ -1,5 +1,4 @@
 package com.example.service_gestion_administrateur.Controllers;
-/*
 import org.example.service_gestion_employes.FeignClients.EmployeeAPI;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,9 +22,8 @@ public class EmployeeRestClient {
         return employeeAPI.getEmployeeById(id);
     }
 
-    @PostMapping("/employee/add")
+    @PostMapping("/employees/add")
     public String addEmployee(@RequestBody String employee) {
         return employeeAPI.addEmployee(employee);
     }
 }
-*/
