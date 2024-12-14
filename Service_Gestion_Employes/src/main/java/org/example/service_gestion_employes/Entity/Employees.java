@@ -1,11 +1,10 @@
 package org.example.service_gestion_employes.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.service_performance.Entity.PerformanceData;
 
 @Entity
 @Data
@@ -22,4 +21,8 @@ public class Employees {
     private String departement;
     private String poste;
     private String dateEmbauche;
+
+    @ManyToOne
+    @JoinColumn(name = "performanceData_id")
+    private PerformanceData performanceData;
 }

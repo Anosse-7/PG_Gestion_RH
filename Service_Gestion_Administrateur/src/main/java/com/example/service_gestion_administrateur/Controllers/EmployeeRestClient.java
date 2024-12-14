@@ -1,5 +1,6 @@
 package com.example.service_gestion_administrateur.Controllers;
-import org.example.service_gestion_employes.FeignClients.EmployeeAPI;
+
+import com.example.service_gestion_administrateur.FeignClients.EmployeeAPI;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

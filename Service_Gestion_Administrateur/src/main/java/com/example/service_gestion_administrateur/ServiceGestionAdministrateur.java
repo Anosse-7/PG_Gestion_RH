@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableFeignClients(basePackages = "org.example.service_gestion_employes.FeignClients")
+@EnableFeignClients
 public class ServiceGestionAdministrateur {
 
     public static void main(String[] args) {

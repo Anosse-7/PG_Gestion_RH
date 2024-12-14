@@ -19,18 +19,18 @@ public class EmployeeRestController {
     }
 
     @GetMapping("/get")
-    public ResponseEntity<Iterable<Employees>> getEmployees() {
+    public ResponseEntity<Iterable<Employees>> getEmployeesApi() {
         return ResponseEntity.ok(employeeService.getEmployees());
     }
 
     @GetMapping("/get/{id}")
-    public ResponseEntity<Employees> getEmployeeById(@PathVariable Long id) {
+    public ResponseEntity<Employees> getEmployeeByIdApi(@PathVariable Long id) {
         Employees employee = employeeService.getEmployeeById(id);
         return ResponseEntity.ok(employee);
     }
 
     @PostMapping("/add")
-    public ResponseEntity<String> addEmployee(@RequestBody Employees employee) {
+    public ResponseEntity<String> addEmployeeApi(@RequestBody Employees employee) {
         try {
             employeeService.addEmployee(employee);
             return ResponseEntity.ok("Employee added");
@@ -42,7 +42,7 @@ public class EmployeeRestController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> deleteEmployee(@PathVariable Long id) {
+    public ResponseEntity<String> deleteEmployeeApi(@PathVariable Long id) {
         try {
             employeeService.deleteEmployee(id);
             return ResponseEntity.ok("Employee deleted");
@@ -54,7 +54,7 @@ public class EmployeeRestController {
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<String> updateEmployeeById(@PathVariable Long id, @RequestBody Employees employee) {
+    public ResponseEntity<String> updateEmployeeByIdApi(@PathVariable Long id, @RequestBody Employees employee) {
         try {
             Employees emp = employeeService.getEmployeeById(id);
             emp.setNom(employee.getNom());
