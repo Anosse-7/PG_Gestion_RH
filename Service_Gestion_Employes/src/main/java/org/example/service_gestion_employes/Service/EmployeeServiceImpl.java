@@ -5,6 +5,8 @@ import org.example.service_gestion_employes.Entity.Employees;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service("EmployeeServiceImpl")
 public class EmployeeServiceImpl implements EmployeeService {
 
@@ -21,7 +23,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public Iterable<Employees> getEmployees() {
+    public List<Employees> getEmployees() {
         return employeeRepository.findAll();
     }
 
