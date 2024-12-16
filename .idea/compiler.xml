@@ -18,9 +18,13 @@
         <module name="Service_Gestion_Administrateur" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Common_entities" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Common_entities" options="-parameters" />
       <module name="Config-Server" options="-parameters" />
       <module name="Eurka-Discovery" options="-parameters" />
       <module name="Gateway" options="-parameters" />

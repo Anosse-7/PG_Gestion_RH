@@ -1,7 +1,11 @@
 package org.example.service_performance.kafka;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.service_performance.Entity.PerformanceData;
+import org.example.service_gestion_employes.Entity.PerformanceData;
+import org.example.service_performance.Service.PerformanceService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
@@ -9,6 +13,12 @@ import org.springframework.stereotype.Service;
 public class PerformanceConsumer {
 
     private final ObjectMapper objectMapper = new ObjectMapper();
+    private final PerformanceService performanceService;
+
+    @Autowired
+    public PerformanceConsumer(PerformanceService performanceService) {
+        this.performanceService = performanceService;
+    }
 
     @KafkaListener(topics = "employee_performance", groupId = "performance-group")
     public void consume(String performanceDataJson) {
@@ -24,9 +34,9 @@ public class PerformanceConsumer {
                 System.out.println("Employee ID: " + employee.getId() + ", Performance Score: " + performanceScore);
             });
 
-            // Add logic to store or update the performance score in the database
+            performanceService.addPerformanceData(performanceData);
 
-        } catch (Exception e) {
+        } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
     }

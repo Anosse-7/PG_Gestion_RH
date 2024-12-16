@@ -1,10 +1,9 @@
-package org.example.service_performance.Entity;
+package org.example.service_gestion_employes.Entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.service_gestion_employes.Entity.Employees;
 
 import java.util.Date;
 import java.util.List;
