@@ -1,6 +1,7 @@
 package com.example.service_gestion_authentification.Controller;
 
 import com.example.service_gestion_authentification.FeignClients.AdministratorFeign;
+import com.example.service_gestion_authentification.FeignClients.LoginRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,14 +29,14 @@ public class AuthentificationController {
     }
 
     @PostMapping("/login")
-    public void loginAdmin(@RequestBody String email, @RequestBody String password) {
-        logger.info("Received login request for email: {}", email);
+    public void loginAdmin(@RequestBody LoginRequest loginRequest) {
+        logger.info("Received login request for email: {}", loginRequest.getEmail());
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication.isAuthenticated()) {
             logger.info("User is already authenticated");
         } else {
             logger.info("User is not authenticated");
-            administratorFeign.LoginAdmin(email, password);
+            administratorFeign.LoginAdmin(loginRequest);
         }
     }
 }

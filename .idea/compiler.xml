@@ -9,17 +9,21 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Service_Gestion_Conge" />
         <module name="Service_Gestion_Employes" />
-        <module name="Service_Paie" />
         <module name="Gateway" />
         <module name="Eurka-Discovery" />
         <module name="Service_Gestion_Authentification" />
         <module name="Service_Performance" />
+        <module name="Config-Server" />
         <module name="Service_Gestion_Administrateur" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Service_Paie" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Config-Server" options="-parameters" />
       <module name="Eurka-Discovery" options="-parameters" />
       <module name="Gateway" options="-parameters" />
       <module name="Service_Gestion_Administrateur" options="-parameters" />

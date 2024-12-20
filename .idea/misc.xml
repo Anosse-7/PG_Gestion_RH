@@ -21,6 +21,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/Common_entities/pom.xml" />
+        <option value="$PROJECT_DIR$/Service_Paie/pom.xml" />
       </set>
     </option>
   </component>
